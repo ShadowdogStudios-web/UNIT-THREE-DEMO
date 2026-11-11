@@ -795,6 +795,38 @@ a.card.demo-open::after{background:rgba(177,68,47,.88);box-shadow:inset 0 1px 0 
 #sds-lock .btn.primary{min-height:48px;font-size:16px;letter-spacing:.02em}
 #sds-lock small{display:block;margin-top:6px;padding-top:12px;border-top:1px solid rgba(60,70,58,.15);font-size:11.5px}
 @media (max-width:480px){#sds-lock .panel{padding:32px 22px 22px}#sds-lock h1{font-size:26px}}
+.demo-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:28px 0 0}
+.demo-cards .dc{display:flex;flex-direction:column;gap:6px;padding:22px 22px 18px;text-decoration:none;color:#1C2A31;background:#fff;border:1px solid var(--line,#D8DCD2);border-top:4px solid #b1442f;box-shadow:0 10px 24px -18px rgba(0,0,0,.45);transition:transform .12s,box-shadow .12s}
+.demo-cards .dc:hover{transform:translateY(-2px);box-shadow:0 16px 28px -18px rgba(0,0,0,.5)}
+.demo-cards .dc.dc-st{border-top-color:#2A6F92}
+.demo-cards .dc b{font:400 25px/1.15 Georgia,serif}
+.demo-cards .dc>span:not(.kicker){color:var(--muted,#5A6358);font-size:15.5px;line-height:1.5}
+.demo-cards .dc em{font-style:normal;font-weight:700;color:#b1442f;margin-top:4px}
+.demo-cards .dc.dc-st em{color:#2A6F92}
+.ab{max-width:980px;margin:0 auto;padding:30px 0 64px}
+.ab h2{margin:40px 0 12px;font:400 30px/1.15 Georgia,serif}
+.ab h3{margin:2px 0 6px;font:400 21px/1.2 Georgia,serif}
+.ab .intro{max-width:760px;font-size:19px}
+.ab-toc{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.ab-toc a{border:1px solid #D8DCD2;background:#fff;padding:5px 11px;text-decoration:none;font-weight:600;font-size:14.5px}
+.ab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.ab-grid.two{grid-template-columns:repeat(auto-fill,minmax(380px,1fr))}
+.ab-card{position:relative;background:#fff;border:1px solid #D8DCD2;padding:20px 20px 16px}
+.ab-card p{margin:0;line-height:1.55}
+.ab-n{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;margin-bottom:8px;color:#fff;font:700 14px 'Source Sans 3',sans-serif;background:linear-gradient(180deg,rgba(201,92,66,.92),rgba(165,60,41,.92))}
+.ab-steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px}
+.ab-steps>div{background:#fff;border:1px solid #D8DCD2;border-left:3px solid #b1442f;padding:14px 16px}
+.ab-steps b{display:block;font-size:17px;margin-bottom:3px}
+.ab-steps span{color:var(--muted,#5A6358);line-height:1.5}
+.ab-units{list-style:none;margin:0;padding:0;display:grid;gap:6px;counter-reset:u}
+.ab-units li{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:#fff;border:1px solid #D8DCD2;padding:11px 16px}
+.ab-units li b{font:400 19px/1.3 Georgia,serif}
+.ab-units li span{color:var(--muted,#5A6358);font-weight:600}
+.ab-units li.here{border-color:#b1442f;box-shadow:inset 4px 0 0 #b1442f}
+.ab-day{width:100%;border-collapse:collapse;background:#fff}
+.ab-day th,.ab-day td{border:1px solid #DCE2D8;padding:9px 12px;text-align:left;vertical-align:top}
+.ab-day th{background:#F4F6F1}
+.ab-day td:first-child{white-space:nowrap;font-weight:700;width:90px}
 @media print{.demo-bar{display:none}}
 </style>
 </head>
@@ -821,7 +853,7 @@ a.card.demo-open::after{background:rgba(177,68,47,.88);box-shadow:inset 0 1px 0 
    © 2026 ShadowDog Digital Studios. All Rights Reserved. */
 (function () {
   'use strict';
-  var LOCK = {"salt": "sds-u3-demo|", "end": "2099-12-31", "windows": [["2026-01-01", ["ef808c255e4c976b391258b7"]]], "master": "3eaa63586e6ff737ed14c58e", "mv": "demo0000"};
+  var LOCK = {"salt": "sds-u3-demo|", "end": "2099-12-31", "windows": [["2026-01-01", ["ef808c255e4c976b391258b7"]]], "master": "acadaabef712cd929f8840fd", "mv": "demo0000"};
   var SEARCH = window.SDS_SEARCH || [];
   var KEY_UNLOCK = 'sds_demo_unlock_v1';
   var PAGE = (document.body && document.body.getAttribute('data-page')) || location.pathname;
@@ -1383,6 +1415,6 @@ document.querySelectorAll('[data-type-f]').forEach(function(b){b.onclick=functio
 document.querySelectorAll('[data-letter-f]').forEach(function(b){b.onclick=function(e){e.preventDefault();letter=b.dataset.letterF;document.querySelectorAll('[data-letter-f]').forEach(function(x){x.classList.toggle('dark',x===b)});apply()}});
 if(location.hash){var t=document.querySelector(location.hash);if(t){t.classList.add('flash');}}})();
 </script>
-<script>(function(){var K=["assignments/ch6.html", "assignments/joplin.html", "chapter6.html", "films/his-new-job.html", "films/index.html", "flipbook/index.html", "full-edition.html", "haymarket/index.html", "images.html", "index.html", "joplin/index.html", "quizzes/industry-labor.html", "teacher/lesson-plans.html", "terms.html", "timeline.html"],R="./";var here=location.pathname.replace(/[^/]*$/,"");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.getAttribute("href");if(/^(https?:|mailto:|#|data:|javascript:)/.test(h))return;var b=h.split("#")[0];if(!/\.html$/.test(b))return;var u=new URL(b,location.href).pathname,root=new URL(R,location.href).pathname,rel=u.indexOf(root)===0?u.slice(root.length):u;if(K.indexOf(rel)<0){e.preventDefault();location.href=R+"full-edition.html";}},true);})();</script>
+<script>(function(){var K=["about.html", "assignments/ch6.html", "assignments/joplin.html", "chapter6.html", "films/his-new-job.html", "films/index.html", "flipbook/index.html", "full-edition.html", "haymarket/index.html", "images.html", "index.html", "joplin/index.html", "mentor/classroom.html", "mentor/coach-view.html", "mentor/index.html", "mentor/notebook.html", "mentor/observation.html", "mentor/primers.html", "mentor/run-of-show.html", "quizzes/industry-labor.html", "teacher/lesson-plans.html", "terms.html", "timeline.html"],R="./";var here=location.pathname.replace(/[^/]*$/,"");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.getAttribute("href");if(/^(https?:|mailto:|#|data:|javascript:)/.test(h))return;var b=h.split("#")[0];if(!/\.html$/.test(b))return;var u=new URL(b,location.href).pathname,root=new URL(R,location.href).pathname,rel=u.indexOf(root)===0?u.slice(root.length):u;if(K.indexOf(rel)<0){e.preventDefault();location.href=R+"full-edition.html";}},true);})();</script>
 </body>
 </html>

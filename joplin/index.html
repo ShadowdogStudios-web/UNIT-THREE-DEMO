@@ -795,7 +795,78 @@ a.card.demo-open::after{background:rgba(177,68,47,.88);box-shadow:inset 0 1px 0 
 #sds-lock .btn.primary{min-height:48px;font-size:16px;letter-spacing:.02em}
 #sds-lock small{display:block;margin-top:6px;padding-top:12px;border-top:1px solid rgba(60,70,58,.15);font-size:11.5px}
 @media (max-width:480px){#sds-lock .panel{padding:32px 22px 22px}#sds-lock h1{font-size:26px}}
+.demo-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:28px 0 0}
+.demo-cards .dc{display:flex;flex-direction:column;gap:6px;padding:22px 22px 18px;text-decoration:none;color:#1C2A31;background:#fff;border:1px solid var(--line,#D8DCD2);border-top:4px solid #b1442f;box-shadow:0 10px 24px -18px rgba(0,0,0,.45);transition:transform .12s,box-shadow .12s}
+.demo-cards .dc:hover{transform:translateY(-2px);box-shadow:0 16px 28px -18px rgba(0,0,0,.5)}
+.demo-cards .dc.dc-st{border-top-color:#2A6F92}
+.demo-cards .dc b{font:400 25px/1.15 Georgia,serif}
+.demo-cards .dc>span:not(.kicker){color:var(--muted,#5A6358);font-size:15.5px;line-height:1.5}
+.demo-cards .dc em{font-style:normal;font-weight:700;color:#b1442f;margin-top:4px}
+.demo-cards .dc.dc-st em{color:#2A6F92}
+.ab{max-width:980px;margin:0 auto;padding:30px 0 64px}
+.ab h2{margin:40px 0 12px;font:400 30px/1.15 Georgia,serif}
+.ab h3{margin:2px 0 6px;font:400 21px/1.2 Georgia,serif}
+.ab .intro{max-width:760px;font-size:19px}
+.ab-toc{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.ab-toc a{border:1px solid #D8DCD2;background:#fff;padding:5px 11px;text-decoration:none;font-weight:600;font-size:14.5px}
+.ab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.ab-grid.two{grid-template-columns:repeat(auto-fill,minmax(380px,1fr))}
+.ab-card{position:relative;background:#fff;border:1px solid #D8DCD2;padding:20px 20px 16px}
+.ab-card p{margin:0;line-height:1.55}
+.ab-n{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;margin-bottom:8px;color:#fff;font:700 14px 'Source Sans 3',sans-serif;background:linear-gradient(180deg,rgba(201,92,66,.92),rgba(165,60,41,.92))}
+.ab-steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px}
+.ab-steps>div{background:#fff;border:1px solid #D8DCD2;border-left:3px solid #b1442f;padding:14px 16px}
+.ab-steps b{display:block;font-size:17px;margin-bottom:3px}
+.ab-steps span{color:var(--muted,#5A6358);line-height:1.5}
+.ab-units{list-style:none;margin:0;padding:0;display:grid;gap:6px;counter-reset:u}
+.ab-units li{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:#fff;border:1px solid #D8DCD2;padding:11px 16px}
+.ab-units li b{font:400 19px/1.3 Georgia,serif}
+.ab-units li span{color:var(--muted,#5A6358);font-weight:600}
+.ab-units li.here{border-color:#b1442f;box-shadow:inset 4px 0 0 #b1442f}
+.ab-day{width:100%;border-collapse:collapse;background:#fff}
+.ab-day th,.ab-day td{border:1px solid #DCE2D8;padding:9px 12px;text-align:left;vertical-align:top}
+.ab-day th{background:#F4F6F1}
+.ab-day td:first-child{white-space:nowrap;font-weight:700;width:90px}
 @media print{.demo-bar{display:none}}
+</style>
+<style>/* ---------- Student Teacher Edition: Coach panel ---------- */
+.mentor-bar{background:linear-gradient(180deg,#24485C,#1A3442);color:#EEF4F7;font:600 15px/1.4 'Source Sans 3',system-ui,sans-serif;border-bottom:3px solid #b1442f;box-shadow:0 4px 12px -6px rgba(0,0,0,.45);position:relative;z-index:5}
+.mentor-bar .wrap{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+.mentor-bar .mb-id{display:flex;align-items:center;gap:12px}
+.mentor-bar .mb-id svg{width:30px;height:30px;flex:none;fill:none;stroke:#9FD3EA;stroke-width:1.7;stroke-linejoin:round}
+.mentor-bar .mb-id b{display:block;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:#9FD3EA}
+.mentor-bar .mb-id span{display:block;font:400 18px/1.2 Georgia,serif;color:#fff}
+.mentor-bar nav{display:flex;flex-wrap:wrap;gap:6px}
+.mentor-bar nav a{color:#fff;text-decoration:none;border:1px solid rgba(159,211,234,.45);background:rgba(255,255,255,.06);padding:6px 11px;border-radius:4px;font-size:14.5px;transition:background .12s,border-color .12s}
+.mentor-bar nav a:hover,.mentor-bar nav a:focus-visible{background:rgba(159,211,234,.18);border-color:#9FD3EA}
+.mentor-bar nav a[aria-current="page"]{background:#b1442f;border-color:#b1442f}
+.coach-tab{position:fixed;left:14px;bottom:14px;z-index:60;display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 12px;border:1px solid rgba(255,255,255,.18);border-radius:17px;cursor:pointer;
+ background:rgba(31,58,74,.9);color:#fff;font:700 12px/1 'Source Sans 3',sans-serif;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 6px 14px -6px rgba(0,0,0,.5);opacity:.85;transition:opacity .15s}
+.coach-tab:hover,.coach-tab:focus-visible,.coach-tab[aria-expanded="true"]{opacity:1}
+.coach-tab svg{width:16px;height:16px;fill:none;stroke:#9FD3EA;stroke-width:1.8;stroke-linejoin:round}
+.coach-drawer{position:fixed;left:0;top:0;bottom:0;width:340px;max-width:90vw;z-index:61;background:#FBFCFD;border-right:1px solid #CFDAE1;box-shadow:12px 0 30px -14px rgba(0,0,0,.5);display:flex;flex-direction:column;font:400 14.5px/1.45 'Source Sans 3',system-ui,sans-serif;color:#1C2A31}
+.coach-drawer[hidden]{display:none}
+.cn-head{display:flex;justify-content:space-between;gap:10px;padding:16px 18px 12px;border-bottom:1px solid #DCE5EA;background:#fff}
+.cn-kick{display:block;font:700 11px/1.3 'Source Sans 3',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2A6F92}
+.cn-head h2{margin:4px 0 0;font:400 21px/1.2 Georgia,serif}
+.cn-x{border:0;background:none;font-size:26px;line-height:1;cursor:pointer;color:#5C6E78;padding:0 4px}
+.cn-body{overflow:auto;padding:14px 18px 22px;display:flex;flex-direction:column;gap:10px}
+.cn-release{margin:0;padding:8px 10px;background:#EAF4F9;border-left:3px solid #2A6F92;font-size:14px}
+.cn-row{border:1px solid #DCE5EA;background:#fff;padding:9px 12px;border-radius:4px}
+.cn-row p,.cn-row ol{margin:3px 0 0}
+.cn-row ol{padding-left:20px}
+.cn-lbl{display:block;font:700 11px/1.3 'Source Sans 3',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#5C6E78}
+.cn-say{border-left:3px solid #1F3A4A}
+.cn-ask{border-left:3px solid #b1442f}
+.cn-ans{border-left:3px solid #6E8F4E;background:#F6FAF2}
+.cn-watch{border-left:3px solid #C9A72A;background:#FFFBEA}
+.cn-move{border-left:3px solid #2A6F92}
+.cn-links{display:flex;flex-wrap:wrap;gap:6px}
+.cn-links .btn{min-height:34px;padding:0 10px;font-size:13px}
+.cn-q textarea{width:100%;min-height:84px;margin-top:4px;border:1px solid #C5D3DB;border-radius:4px;padding:8px 10px;font:400 15px/1.4 'Source Sans 3',sans-serif;resize:vertical}
+.cn-foot{margin:0;font-size:12.5px;color:#5C6E78}
+.cn-foot kbd{border:1px solid #C5D3DB;border-bottom-width:2px;border-radius:3px;padding:0 5px;font:600 12px 'Source Sans 3',sans-serif;background:#fff}
+@media print{.coach-tab,.coach-drawer,.mentor-bar{display:none!important}}
 </style>
 </head>
 <body data-page="u3-joplin" data-root="../" data-notes class="deck-page">
@@ -820,7 +891,7 @@ a.card.demo-open::after{background:rgba(177,68,47,.88);box-shadow:inset 0 1px 0 
    © 2026 ShadowDog Digital Studios. All Rights Reserved. */
 (function () {
   'use strict';
-  var LOCK = {"salt": "sds-u3-demo|", "end": "2099-12-31", "windows": [["2026-01-01", ["ef808c255e4c976b391258b7"]]], "master": "3eaa63586e6ff737ed14c58e", "mv": "demo0000"};
+  var LOCK = {"salt": "sds-u3-demo|", "end": "2099-12-31", "windows": [["2026-01-01", ["ef808c255e4c976b391258b7"]]], "master": "acadaabef712cd929f8840fd", "mv": "demo0000"};
   var SEARCH = window.SDS_SEARCH || [];
   var KEY_UNLOCK = 'sds_demo_unlock_v1';
   var PAGE = (document.body && document.body.getAttribute('data-page')) || location.pathname;
@@ -1447,6 +1518,78 @@ a.card.demo-open::after{background:rgba(177,68,47,.88);box-shadow:inset 0 1px 0 
   });
 })();
 </script>
-<script>(function(){var K=["assignments/ch6.html", "assignments/joplin.html", "chapter6.html", "films/his-new-job.html", "films/index.html", "flipbook/index.html", "full-edition.html", "haymarket/index.html", "images.html", "index.html", "joplin/index.html", "quizzes/industry-labor.html", "teacher/lesson-plans.html", "terms.html", "timeline.html"],R="../";var here=location.pathname.replace(/[^/]*$/,"");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.getAttribute("href");if(/^(https?:|mailto:|#|data:|javascript:)/.test(h))return;var b=h.split("#")[0];if(!/\.html$/.test(b))return;var u=new URL(b,location.href).pathname,root=new URL(R,location.href).pathname,rel=u.indexOf(root)===0?u.slice(root.length):u;if(K.indexOf(rel)<0){e.preventDefault();location.href=R+"full-edition.html";}},true);})();</script>
+<script>(function(){var K=["about.html", "assignments/ch6.html", "assignments/joplin.html", "chapter6.html", "films/his-new-job.html", "films/index.html", "flipbook/index.html", "full-edition.html", "haymarket/index.html", "images.html", "index.html", "joplin/index.html", "mentor/classroom.html", "mentor/coach-view.html", "mentor/index.html", "mentor/notebook.html", "mentor/observation.html", "mentor/primers.html", "mentor/run-of-show.html", "quizzes/industry-labor.html", "teacher/lesson-plans.html", "terms.html", "timeline.html"],R="../";var here=location.pathname.replace(/[^/]*$/,"");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.getAttribute("href");if(/^(https?:|mailto:|#|data:|javascript:)/.test(h))return;var b=h.split("#")[0];if(!/\.html$/.test(b))return;var u=new URL(b,location.href).pathname,root=new URL(R,location.href).pathname,rel=u.indexOf(root)===0?u.slice(root.length):u;if(K.indexOf(rel)<0){e.preventDefault();location.href=R+"full-edition.html";}},true);})();</script>
+<script>window.SDS_COACH={"page": "joplin/index.html", "title": "Student Teacher · Ragtime: Scott Joplin", "slides": [{"t": 2, "say": "Cover. Read the opening and the driving question aloud. Scott Joplin and ragtime. Have headphones ready.", "ask": "What do you predict the answer will be?", "ans": "Any prediction — they'll test it.", "watch": "Students click ahead to the end. Tell them the labs need the middle slides.", "move": "Pairs work through at their own pace; you circulate.", "title": "Ragtime: Scott Joplin"}, {"t": 3, "say": "Born around 1868 in northeast Texas into a family that included formerly enslaved people.", "ask": "What did Joplin have to overcome to become a musician?", "ans": "Poverty, racism, little access to formal training.", "watch": "Students skim. Ask them to highlight one fact per slide.", "move": "Read aloud is available for students who need it.", "title": "A pianist from the borderlands"}, {"t": 3, "say": "Sedalia, Missouri: a railroad town with music.", "ask": "Why would a railroad town have music?", "ans": "Workers with paychecks, clubs, travelers.", "watch": "Students skim. Ask them to highlight one fact per slide.", "move": "Read aloud is available for students who need it.", "title": "A railroad town with music in it"}, {"t": 3, "say": "What makes ragtime: steady left hand, syncopated right hand.", "ask": "Tap the beat on your desk while the music plays — where does the melody land?", "ans": "Just off the beat — that's syncopation.", "watch": "Students skim. Ask them to highlight one fact per slide.", "move": "Read aloud is available for students who need it.", "title": "What makes it ragtime?"}, {"t": 6, "say": "Listening slide. Play the Maple Leaf Rag (1916 piano roll, played by Joplin himself). Students listen once just to enjoy, then again with the question.", "ask": "What do you notice about the rhythm?", "ans": "Bouncy, off-beat melody over a steady beat.", "watch": "Audio needs headphones or the room speaker. Test it before class.", "move": "Have students tap the left-hand beat.", "title": "Four rags by Scott Joplin"}, {"t": 3, "say": "Selling music by the page: sheet music was the product before records and radio.", "ask": "Why did publishers put bright covers on sheet music?", "ans": "To sell it — covers were advertising.", "watch": "Students skim. Ask them to highlight one fact per slide.", "move": "Read aloud is available for students who need it.", "title": "Selling music by the page"}, {"t": 3, "say": "'Never right to play ragtime fast' — Joplin's School of Ragtime, 1908.", "ask": "Why did Joplin want ragtime taken seriously?", "ans": "He saw it as serious music, not cheap noise.", "watch": "Students skim. Ask them to highlight one fact per slide.", "move": "Read aloud is available for students who need it.", "title": "“Never right to play ragtime fast”"}, {"t": 3, "say": "From Missouri to the world, through railroads and the 1893 fair.", "ask": "How did ragtime spread?", "ans": "Railroads, sheet music, touring pianists, the World's Fair.", "watch": "Students skim. Ask them to highlight one fact per slide.", "move": "Read aloud is available for students who need it.", "title": "From Missouri to the world"}, {"t": 3, "say": "St. Louis and 'The Cascades,' written for the 1904 World's Fair.", "ask": "What does writing music for a World's Fair tell you about Joplin's ambitions?", "ans": "He wanted a big, public, respected audience.", "watch": "Students skim. Ask them to highlight one fact per slide.", "move": "Read aloud is available for students who need it.", "title": "A home on Delmar, and “The Cascades”"}, {"t": 3, "say": "Treemonisha: an opera he couldn't get staged.", "ask": "Why couldn't a famous composer get his opera performed?", "ans": "Racism; Black composers weren't taken seriously in 'high' music.", "watch": "Students skim. Ask them to highlight one fact per slide.", "move": "Read aloud is available for students who need it.", "title": "An opera called Treemonisha"}, {"t": 3, "say": "A late encore: rediscovered in the 1970s; Pulitzer Prize in 1976.", "ask": "Why might it take 60 years to honor him?", "ans": "The country's attitudes toward Black artists changed slowly.", "watch": "Students skim. Ask them to highlight one fact per slide.", "move": "Read aloud is available for students who need it.", "title": "A late encore"}, {"t": 5, "say": "Why did it take so long? Connect to Chapter 10's nadir.", "ask": "How does Joplin's life connect to what we learned about the nadir?", "ans": "Jim Crow limited what Black artists were allowed to do and be credited for.", "watch": "Students miss the connection to Chapter 10.", "move": "Sentence starter on the slide.", "title": "Why did it take so long?"}, {"t": 1, "say": "Your assignment: Listen Like a Historian. It opens on its own page.", "ask": "", "ans": "", "watch": "", "move": "", "title": "Your assignment"}], "plan": "deep-joplin"};</script>
+<script>/* Promise & Practice · Unit 3 Student Teacher Edition — Coach panel.
+   © 2026 ShadowDog Digital Studios. All Rights Reserved. */
+(function () {
+  'use strict';
+  var C = window.SDS_COACH; if (!C) return;
+  var ROOT = document.body.getAttribute('data-root') || '';
+  var KQ = 'sds_mentor_q_v1', KOPEN = 'sds_mentor_coach_open';
+  function st(k, v) { try { if (v === undefined) return localStorage.getItem(k); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { return null; } }
+  function loadQ() { try { return JSON.parse(st(KQ) || '{}'); } catch (e) { return {}; } }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  var bc = null; try { bc = new BroadcastChannel('sds-coach'); } catch (e) {}
+  var deck = C.slides && C.slides.length;
+  var cur = 0;
+  if (deck) { var on = document.querySelector('.slide.on'); var all = document.querySelectorAll('.slide'); for (var i = 0; i < all.length; i++) if (all[i] === on) cur = i; }
+
+  var tab = document.createElement('button'); tab.type = 'button'; tab.className = 'coach-tab no-print'; tab.setAttribute('aria-expanded', 'false'); tab.setAttribute('aria-controls', 'coach-drawer');
+  tab.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg>Coach'; tab.title = 'Coach notes (C)';
+  var dr = document.createElement('aside'); dr.id = 'coach-drawer'; dr.className = 'coach-drawer no-print'; dr.setAttribute('aria-label', 'Coach notes'); dr.hidden = true;
+  document.body.appendChild(tab); document.body.appendChild(dr);
+
+  function current() { return deck ? C.slides[Math.min(cur, C.slides.length - 1)] : C.card; }
+  function qKey() { return C.page + '|' + (deck ? cur : 'page'); }
+  function row(label, cls, text) { return text ? '<div class="cn-row ' + cls + '"><span class="cn-lbl">' + label + '</span><p>' + esc(text) + '</p></div>' : ''; }
+  function render() {
+    var n = current() || {};
+    var head = deck ? 'Slide ' + (cur + 1) + ' of ' + C.slides.length + (n.t ? ' · about ' + n.t + ' min' : '') : (n.kind || 'This page');
+    var steps = n.steps ? '<div class="cn-row cn-steps"><span class="cn-lbl">How to run it</span><ol>' + n.steps.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol></div>' : '';
+    var q = loadQ()[qKey()];
+    dr.innerHTML = '<header class="cn-head"><div><span class="cn-kick">Coach · ' + esc(head) + '</span><h2>' + esc(deck ? n.title : C.title) + '</h2></div>' +
+      '<button type="button" class="cn-x" data-c="close" aria-label="Close coach notes">×</button></header>' +
+      '<div class="cn-body">' +
+      (C.release ? '<p class="cn-release">' + esc(C.release) + '</p>' : '') +
+      row('Say', 'cn-say', n.say) + row('Ask', 'cn-ask', n.ask) + row('Good answers sound like', 'cn-ans', n.ans) + steps +
+      row('Watch for', 'cn-watch', n.watch) + row('Support move', 'cn-move', n.move) +
+      '<div class="cn-links">' +
+      '<button type="button" class="btn" data-c="pop">Pop out on my screen</button>' +
+      (C.plan ? '<a class="btn" href="' + ROOT + 'teacher/lesson-plans.html#' + C.plan + '" target="_blank" rel="noopener">Lesson plan</a>' : '') +
+      (C.primer ? '<a class="btn" href="' + ROOT + 'mentor/primers.html#ch' + C.primer + '" target="_blank" rel="noopener">Chapter primer</a>' : '') +
+      (C.key ? '<a class="btn" href="' + ROOT + 'teacher/index.html" target="_blank" rel="noopener">Answer key</a>' : '') +
+      '</div>' +
+      '<label class="cn-q"><span class="cn-lbl">Question or note for your mentor</span><textarea data-c="q" placeholder="What do you want to ask about this ' + (deck ? 'slide' : 'page') + '? It saves on this device and collects in your Mentor Notebook.">' + esc(q ? q.text : '') + '</textarea></label>' +
+      '<p class="cn-foot">Projecting? Use <b>Pop out on my screen</b> so these notes stay off the projector. Press <kbd>C</kbd> to show or hide.</p>' +
+      '</div>';
+  }
+  function open(on) {
+    dr.hidden = !on; tab.setAttribute('aria-expanded', on ? 'true' : 'false'); document.documentElement.classList.toggle('coach-open', on);
+    if (on) render();
+  }
+  function post() { if (bc) try { bc.postMessage({ page: C.page, slide: cur }); } catch (e) {} st('sds_mentor_coach_now', JSON.stringify({ page: C.page, slide: cur, at: Date.now() })); }
+  tab.addEventListener('click', function () { open(dr.hidden); });
+  dr.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-c]'); if (!b) return;
+    if (b.dataset.c === 'close') open(false);
+    if (b.dataset.c === 'pop') { window.open(ROOT + 'mentor/coach-view.html#' + encodeURIComponent(C.page) + '|' + cur, 'sds-coach-view', 'width=560,height=820'); setTimeout(post, 900); }
+  });
+  dr.addEventListener('input', function (e) {
+    if (e.target.dataset.c !== 'q') return;
+    var all = loadQ(), k = qKey(), v = e.target.value.trim();
+    if (v) all[k] = { text: e.target.value, page: C.page, pageTitle: C.title, slide: deck ? cur + 1 : null, slideTitle: deck ? (current() || {}).title : null, at: new Date().toISOString() };
+    else delete all[k];
+    st(KQ, JSON.stringify(all));
+  });
+  document.addEventListener('sds:slide', function (e) { cur = +(e.detail || 0); if (!dr.hidden) render(); post(); });
+  document.addEventListener('keydown', function (e) {
+    if ((e.key === 'c' || e.key === 'C') && !e.metaKey && !e.ctrlKey && !e.altKey && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName) && !document.activeElement.isContentEditable) open(dr.hidden);
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !dr.hidden) open(false); });
+  document.addEventListener('mousedown', function (e) { if (!dr.hidden && !dr.contains(e.target) && !tab.contains(e.target)) open(false); });
+  post();
+})();
+</script>
 </body>
 </html>
